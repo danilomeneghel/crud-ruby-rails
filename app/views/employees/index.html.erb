@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Employees</h1>
+
+<%= link_to 'New Employee', new_employee_path, :class => 'btn btn-primary' %>
+
+<div class="search-right">
+	<%= form_tag employees_path, :method => :get do %>
+		<%= text_field_tag :search, params[:search] %>
+		<%= submit_tag "Search", :class => 'btn btn-primary' %>
+	<% end %>
+</div>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Sector</th>
+      <th><%= sortable "name" %></th>
+      <th><%= sortable "age" %></th>
+      <th><%= sortable "role" %></th>
+      <th><%= sortable "status" %></th>
+      <th colspan="3" class="text-center col-sm-2">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @employees.each do |employee| %>
+      <tr>
+        <td><%= employee.sector.name %></td>
+        <td><%= employee.name %></td>
+        <td><%= employee.age %></td>
+        <td><%= employee.role %></td>
+        <td><%= employee.active %></td>
+        <td class="text-center"><%= link_to 'Show', employee, :class => 'btn btn-default' %></td>
+        <td class="text-center"><%= link_to 'Edit', edit_employee_path(employee), :class => 'btn btn-default' %></td>
+        <td class="text-center"><%= link_to 'Delete', employee, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class="pag-right">
+	<%= will_paginate @employees, renderer: BootstrapPagination::Rails %>
+</div>
+
