@@ -49,6 +49,10 @@ Finally open http://localhost:3000/ in your browser.
 
 http://localhost:3000/rails/info/routes
 
+## Demonstration
+
+https://crud-ruby-rails.herokuapp.com/
+
 ## License
 
 Office is licensed under <a href="license.md">The MIT License (MIT)</a>.
