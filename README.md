@@ -55,7 +55,7 @@ https://crud-ruby-rails.herokuapp.com/
 
 ## License
 
-Office is licensed under <a href="license.md">The MIT License (MIT)</a>.
+This project is licensed under <a href="license.md">The MIT License (MIT)</a>.
 
 ## Screenshots
 
