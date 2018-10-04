@@ -53,14 +53,14 @@ a.btn-primary {
 
 .search-right {
 	display: block;
-	width: 50%;
+	width: 70%;
 	float: right;
 	text-align: right;
 	height: 40px;
 }
 
 .search-right input {
-	height: 33px;
+	height: 33px !important;
 }
 
 .pag-right {
@@ -70,6 +70,17 @@ a.btn-primary {
 	text-align: right;
 	margin-top: -15px;
 	height: 50px;
+}
+
+.btn-success {
+	color: #fff !important;
+}
+.col-actions {
+	text-align: center;
+	width: 280px !important;
+}
+.btn {
+	vertical-align: baseline !important;
 }
 
 th {
