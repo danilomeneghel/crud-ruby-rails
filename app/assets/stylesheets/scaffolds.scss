@@ -1,14 +1,12 @@
 body {
   background-color: #fff;
   color: #333;
-  margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
-  line-height: 18px;
 }
 
-h1 {
-  padding-bottom: 15px;
+h1, h2, h3 {
+  padding-bottom: 10px;
 }
 
 p, ol, ul, td {
@@ -51,16 +49,64 @@ a.btn-primary {
   margin-bottom: 10px;
 }
 
+.navbar {
+    position: relative;
+    min-height: 60px;
+    margin-bottom: 15px;
+}
+.navbar-brand {
+	padding: 20px 25px !important;
+	color: #fff !important;
+	min-height: 60px !important;
+}
+.navbar-static-top {
+    z-index: 9 !important;
+}
+.navbar-default {
+    background-color: #398939 !important;
+    box-shadow: 0px 2px 6px #ccc;
+}
+.navbar-default .navbar-nav {
+	padding: 20px !important;
+}
+.navbar-default .navbar-nav > li {
+	margin-right: 30px;
+}
+.navbar-default .navbar-nav > li > a {
+	color: #fff !important;
+	padding: 0px !important;
+	font-size: 14px !important;
+}
+.navbar-default .navbar-nav > li > a:hover {
+	color: #ddd !important;
+}
+.navbar-default .navbar-toggle {
+	border-color: #fff !important;
+    background-color: #449D44 !important;
+}
+.navbar-default .navbar-toggle:hover {
+	background-color: #4b894b !important;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #fff !important;
+}
+.container-fluid {
+	padding-left: 25px !important;
+	padding-right: 25px !important;
+}
+
 .search-right {
 	display: block;
-	width: 70%;
+	min-width: 28%;
 	float: right;
 	text-align: right;
 	height: 40px;
 }
 
 .search-right input {
-	height: 33px !important;
+	float: left;
+	margin-right: 5px !important;
+	margin-left: -98px !important;
 }
 
 .pag-right {
@@ -75,20 +121,28 @@ a.btn-primary {
 .btn-success {
 	color: #fff !important;
 }
+
 .col-actions {
 	text-align: center;
 	width: 280px !important;
 }
+
 .btn {
 	vertical-align: baseline !important;
+	margin-bottom: -1px !important;
 }
 
 th {
-  padding-bottom: 5px;
+	padding: 15px 8px !important;
 }
 
 td {
-  padding: 0 5px 7px;
+	padding: 0 5px 7px;
+	vertical-align: baseline !important;
+}
+
+.container-form {
+	margin-left: -15px !important;
 }
 
 div {

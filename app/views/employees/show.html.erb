@@ -1,38 +1,52 @@
-<p id="notice"><%= notice %></p>
+<h2>Employee</h2>
 
-<p>
-  <strong>Sector:</strong>
-  <%= @employee.sector.name %>
-</p>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<div class="container-form col-sm-5">
+			<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @employee.name %>
-</p>
+			<p>
+			  <strong>Sector:</strong>
+			  <%= @employee.sector.name %>
+			</p>
 
-<p>
-  <strong>Age:</strong>
-  <%= @employee.age %>
-</p>
+			<p>
+			  <strong>Name:</strong>
+			  <%= @employee.name %>
+			</p>
 
-<p>
-  <strong>Role:</strong>
-  <%= @employee.role %>
-</p>
+			<p>
+			  <strong>Age:</strong>
+			  <%= @employee.age %>
+			</p>
 
-<p>
-  <strong>Skill:</strong>
-  <ul>
-	<% @employee.skill.each do |skill| %>
-		<li><%= skill.name %></li>
-	<% end %>
-  </ul>
-</p>
+			<p>
+			  <strong>Role:</strong>
+			  <%= @employee.role %>
+			</p>
 
-<p>
-  <strong>Active:</strong>
-  <%= @employee.active %>
-</p>
+			<p>
+			  <strong>Skill:</strong>
+			  <ul>
+				<% @employee.skill.each do |skill| %>
+					<li><%= skill.name %></li>
+				<% end %>
+			  </ul>
+			</p>
 
-<%= link_to 'Edit', edit_employee_path(@employee) %> |
-<%= link_to 'Back', employees_path %>
+			<p>
+			  <strong>Active:</strong>
+			  <%= @employee.active %>
+			</p>
+
+			<br><br>
+			
+			<%= link_to employees_path, :class => "btn btn-default" do %> 
+				<i class="fa fa-arrow-left"></i> Back
+			<% end %>
+			<%= link_to edit_employee_path, :class => "btn btn-success" do %> 
+				<i class="fa fa-edit"></i> Edit
+			<% end %>
+		</div>
+	</div>
+</div>

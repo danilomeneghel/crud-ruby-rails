@@ -5,12 +5,12 @@ class EmployeesController < ApplicationController
   # GET /employees.json
   def index
 	if params[:search]
-		@employees = Employee.search(params[:search]).paginate(:page => params[:page], :per_page => 5)
+		@employees = Employee.search(params[:search])
 	else 
-		@employees = Employee.all.paginate(:page => params[:page], :per_page => 5)
+		@employees = Employee.all
 	end
 	
-    @employees = @employees.order(sort_column + ' ' + sort_direction)
+    @employees = @employees.order(sort_column + ' ' + sort_direction).paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /employees/1
@@ -68,12 +68,10 @@ class EmployeesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_employee
       @employee = Employee.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def employee_params
       params.require(:employee).permit(:name, :age, :role, :active, :sector_id, :skill_ids => [])
     end

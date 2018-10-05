@@ -5,12 +5,12 @@ class SectorsController < ApplicationController
   # GET /sectors.json
   def index
     if params[:search]
-		@sectors = Sector.search(params[:search]).paginate(:page => params[:page], :per_page => 5)
+		@sectors = Sector.search(params[:search])
 	else 
-		@sectors = Sector.all.paginate(:page => params[:page], :per_page => 5)
+		@sectors = Sector.all
 	end
 	
-	@sectors = @sectors.order(sort_column + ' ' + sort_direction)
+	@sectors = @sectors.order(sort_column + ' ' + sort_direction).paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /sectors/1

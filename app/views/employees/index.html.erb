@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Employees</h1>
+<h2>Employees</h2>
 
 <%= link_to new_employee_path, :class => "btn btn-success" do %>
 	<i class="fa fa-plus"></i> New Employee
@@ -8,8 +8,8 @@
 
 <div class="search-right">
 	<%= form_tag employees_path, :method => :get do %>
-		<%= text_field_tag :search, params[:search] %>
-		<%= button_tag type: "submit", class: "btn btn-primary", id: "search" do %>
+		<%= text_field_tag :search, params[:search], class: 'form-control' %>
+		<%= button_tag type: "submit", class: "btn btn-primary" do %>
 			<i class="fa fa-search"></i> Search
 		<% end %>
 	<% end %>
@@ -18,7 +18,7 @@
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th scope="col">Sector</th>
+      <th scope="col"><%= sortable "sector.name", "Sector" %></th>
       <th scope="col"><%= sortable "name" %></th>
       <th scope="col"><%= sortable "age" %></th>
       <th scope="col"><%= sortable "role" %></th>
@@ -42,7 +42,7 @@
 			<%= link_to edit_employee_path(employee), :class => "btn btn-primary" do %> 
 				<i class="fa fa-edit"></i> Edit
 			<% end %>
-			<%= link_to employee, method: :delete, data: { confirm: "Are you sure?" }, :class => "btn btn-danger" do %> 
+			<%= link_to employee, method: :delete, data: { confirm: "Are you sure you want to remove?" }, :class => "btn btn-danger" do %> 
 				<i class="fa fa-trash"></i> Delete
 			<% end %>
 		</td>

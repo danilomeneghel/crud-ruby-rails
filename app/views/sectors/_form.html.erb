@@ -11,12 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :sector_name %>
+    <%= form.text_field :name, id: :sector_name, class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= form.submit 'Create Sector', :class => 'btn btn-primary' %>
+	<%= link_to sectors_path, :class => "btn btn-default" do %> 
+		<i class="fa fa-arrow-left"></i> Back
+	<% end %>
+    <%= button_tag type: 'submit', class: 'btn btn-success' do %> 
+		<i class="fa fa-hdd-o"></i> Save
+	<% end %>
   </div>
 <% end %>

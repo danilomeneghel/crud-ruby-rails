@@ -1,6 +1,9 @@
-<h1>Editing Skill</h1>
+<h2>Edit Skill</h2>
 
-<%= render 'form', skill: @skill %>
-
-<%= link_to 'Show', @skill %> |
-<%= link_to 'Back', skills_path %>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<div class="container-form col-sm-5">
+			<%= render 'form', skill: @skill %>
+		</div>
+	</div>
+</div>

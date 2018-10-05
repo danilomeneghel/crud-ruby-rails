@@ -5,12 +5,12 @@ class SkillsController < ApplicationController
   # GET /skills.json
   def index
     if params[:search]
-		@skills = Skill.search(params[:search]).paginate(:page => params[:page], :per_page => 5)
+		@skills = Skill.search(params[:search])
 	else 
-		@skills = Skill.all.paginate(:page => params[:page], :per_page => 5)
+		@skills = Skill.all
 	end
 	
-	@skills = @skills.order(sort_column + ' ' + sort_direction)
+	@skills = @skills.order(sort_column + ' ' + sort_direction).paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /skills/1

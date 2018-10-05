@@ -1,9 +1,23 @@
-<p id="notice"><%= notice %></p>
+<h2>Sector</h2>
 
-<p>
-  <strong>Name:</strong>
-  <%= @sector.name %>
-</p>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<div class="container-form col-sm-5">
+			<p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_sector_path(@sector) %> |
-<%= link_to 'Back', sectors_path %>
+			<p>
+			  <strong>Name:</strong>
+			  <%= @sector.name %>
+			</p>
+
+			<br><br>
+			
+			<%= link_to sectors_path, :class => "btn btn-default" do %> 
+				<i class="fa fa-arrow-left"></i> Back
+			<% end %>
+			<%= link_to edit_sector_path, :class => "btn btn-success" do %> 
+				<i class="fa fa-edit"></i> Edit
+			<% end %>
+		</div>
+	</div>
+</div>
