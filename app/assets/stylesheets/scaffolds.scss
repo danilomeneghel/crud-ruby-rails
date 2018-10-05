@@ -97,7 +97,7 @@ a.btn-primary {
 
 .search-right {
 	display: block;
-	min-width: 28%;
+	max-width: 28% !important;
 	float: right;
 	text-align: right;
 	height: 40px;
