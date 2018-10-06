@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+	<div id="notice" class="alert alert-success"><%= notice %></div>
+<% end %>
 
 <h2>Employees</h2>
 
@@ -15,43 +17,44 @@
 	<% end %>
 </div>
 
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th scope="col"><%= sortable "sector.name", "Sector" %></th>
-      <th scope="col"><%= sortable "name" %></th>
-      <th scope="col"><%= sortable "age" %></th>
-      <th scope="col"><%= sortable "role" %></th>
-      <th scope="col"><%= sortable "status" %></th>
-      <th scope="col" class="col-actions">Actions</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @employees.each do |employee| %>
-      <tr>
-        <td><%= employee.sector.name %></td>
-        <td><%= employee.name %></td>
-        <td><%= employee.age %></td>
-        <td><%= employee.role %></td>
-        <td><%= employee.active %></td>
-        <td class="text-center">
-			<%= link_to employee, :class => "btn btn-default" do %> 
-				<i class="fa fa-eye"></i> Show
-			<% end %>
-			<%= link_to edit_employee_path(employee), :class => "btn btn-primary" do %> 
-				<i class="fa fa-edit"></i> Edit
-			<% end %>
-			<%= link_to employee, method: :delete, data: { confirm: "Are you sure you want to remove?" }, :class => "btn btn-danger" do %> 
-				<i class="fa fa-trash"></i> Delete
-			<% end %>
-		</td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<div class="pag-right">
-	<%= will_paginate @employees, renderer: BootstrapPagination::Rails %>
-</div>
-
+<% if @employees.length == 0 %>
+	<div class="alert alert-info">No items registered</div>
+<% else %>
+	<table class="table table-bordered table-striped">
+	  <thead>
+		<tr>
+		  <th scope="col"><%= sortable "sector.name", "Sector" %></th>
+		  <th scope="col"><%= sortable "name" %></th>
+		  <th scope="col"><%= sortable "age" %></th>
+		  <th scope="col"><%= sortable "role" %></th>
+		  <th scope="col"><%= sortable "status" %></th>
+		  <th scope="col" class="col-actions">Actions</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<% @employees.each do |employee| %>
+		  <tr>
+			<td><%= employee.sector.name %></td>
+			<td><%= employee.name %></td>
+			<td><%= employee.age %></td>
+			<td><%= employee.role %></td>
+			<td><%= employee.active %></td>
+			<td class="text-center">
+				<%= link_to employee, :class => "btn btn-default" do %> 
+					<i class="fa fa-eye"></i> Show
+				<% end %>
+				<%= link_to edit_employee_path(employee), :class => "btn btn-primary" do %> 
+					<i class="fa fa-edit"></i> Edit
+				<% end %>
+				<%= link_to employee, method: :delete, data: { confirm: "Are you sure you want to remove?" }, :class => "btn btn-danger" do %> 
+					<i class="fa fa-trash"></i> Delete
+				<% end %>
+			</td>
+		  </tr>
+		<% end %>
+	  </tbody>
+	</table>
+	<div class="pag-right">
+		<%= will_paginate @employees, renderer: BootstrapPagination::Rails %>
+	</div>
+<% end %>

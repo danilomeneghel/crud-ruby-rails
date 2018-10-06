@@ -34,7 +34,7 @@ class SectorsController < ApplicationController
 
     respond_to do |format|
       if @sector.save
-        format.html { redirect_to @sector, notice: 'Sector was successfully created.' }
+        format.html { redirect_to sectors_url, notice: 'Sector was successfully created.' }
         format.json { render :show, status: :created, location: @sector }
       else
         format.html { render :new }
@@ -48,7 +48,7 @@ class SectorsController < ApplicationController
   def update
     respond_to do |format|
       if @sector.update(sector_params)
-        format.html { redirect_to @sector, notice: 'Sector was successfully updated.' }
+        format.html { redirect_to sectors_url, notice: 'Sector was successfully updated.' }
         format.json { render :show, status: :ok, location: @sector }
       else
         format.html { render :edit }
