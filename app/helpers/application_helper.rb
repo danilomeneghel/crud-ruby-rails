@@ -1,7 +1,7 @@
 module ApplicationHelper
 	def sortable(column, title = nil)
 		title ||= column.titleize
-		direction = column == params[:sort] && params[:direction] == "asc" ? "desc" : "asc"
+		direction = column == sort_column && sort_direction == "asc" ? "desc" : "asc"
 		icon = sort_direction == "asc" ? "fa fa-sort-asc" : "fa fa-sort-desc"
 		icon = column == sort_column ? icon : ""
 		if params[:search]
