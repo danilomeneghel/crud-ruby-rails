@@ -1,6 +1,7 @@
 class EmployeesController < ApplicationController
   before_action :set_employee, only: [:show, :edit, :update, :destroy]
-
+  helper_method :sort_column, :sort_direction
+  
   # GET /employees
   # GET /employees.json
   def index
