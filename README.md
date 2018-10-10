@@ -57,7 +57,12 @@ http://localhost:3000/rails/info/routes
 
 ## Demonstration
 
+You can see the system working by clicking the link below:<br>
 https://crud-ruby-rails.herokuapp.com/
+
+- Login:
+    - Email: admin@admin.com
+    - Password: admin123
 
 ## License
 
