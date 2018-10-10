@@ -45,6 +45,12 @@ $ rails server
 
 Finally open http://localhost:3000/ in your browser.
 
+## Create new modules
+
+```
+$ rails g scaffold name_module field:type
+```
+
 ## Routes
 
 http://localhost:3000/rails/info/routes
@@ -65,10 +71,11 @@ This project is licensed under <a href="license.md">The MIT License (MIT)</a>.
 ![Screenshots](screenshots/screenshot04.png)<br><br>
 ![Screenshots](screenshots/screenshot05.png)<br><br>
 ![Screenshots](screenshots/screenshot06.png)<br><br>
+![Screenshots](screenshots/screenshot07.png)<br><br>
+![Screenshots](screenshots/screenshot08.png)<br><br>
 
 
 Developed by<br>
 Danilo Meneghel<br>
 danilo.meneghel@gmail.com<br>
 http://danilomeneghel.github.io/<br>
-

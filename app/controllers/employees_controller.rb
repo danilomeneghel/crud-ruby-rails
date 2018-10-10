@@ -1,16 +1,17 @@
 class EmployeesController < ApplicationController
   before_action :set_employee, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
   helper_method :sort_column, :sort_direction
-  
+
   # GET /employees
   # GET /employees.json
   def index
 	if params[:search]
 		@employees = Employee.search(params[:search])
-	else 
+	else
 		@employees = Employee.all
 	end
-	
+
     @employees = @employees.order(sort_column + ' ' + sort_direction).paginate(:page => params[:page], :per_page => 5)
   end
 
@@ -76,11 +77,11 @@ class EmployeesController < ApplicationController
     def employee_params
       params.require(:employee).permit(:name, :age, :role, :active, :sector_id, :skill_ids => [])
     end
-	
+
 	def sort_column
 	  Employee.column_names.include?(params[:sort]) ? params[:sort] : "name"
 	end
-	
+
 	def sort_direction
 	  %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
 	end

@@ -35,7 +35,7 @@ a {
 
 a.btn-primary, a.btn-danger {
   color: #fff;
-  
+
   &:visited {
     color: #fff;
   }
@@ -55,9 +55,9 @@ a.btn-primary {
     margin-bottom: 15px;
 }
 .navbar-brand {
-	padding: 20px 25px !important;
-	color: #fff !important;
-	min-height: 60px !important;
+    padding: 20px 25px !important;
+    color: #fff !important;
+    min-height: 60px !important;
 }
 .navbar-static-top {
     z-index: 9 !important;
@@ -66,30 +66,57 @@ a.btn-primary {
     background-color: #C52F24 !important;
     box-shadow: 0px 2px 6px #ccc;
 }
-.navbar-default .navbar-nav {
-	padding: 20px !important;
-}
 .navbar-default .navbar-nav > li {
-	margin-right: 30px;
-}
-.navbar-default .navbar-nav > li > a {
-	color: #fff !important;
-	padding: 0px !important;
-	font-size: 14px !important;
+    margin-right: 30px;
 }
 .navbar-default .navbar-nav > li > a:hover {
-	color: #ddd !important;
+    color: #ddd !important;
 }
 .navbar-default .navbar-toggle {
-	border-color: #fff !important;
-    background-color: #449D44 !important;
+    border-color: #fff !important;
+    background-color: #C52F24 !important;
 }
 .navbar-default .navbar-toggle:hover {
-	background-color: #4b894b !important;
+    background-color: #aa3027 !important;
 }
 .navbar-default .navbar-toggle .icon-bar {
-	background-color: #fff !important;
+    background-color: #fff !important;
 }
+.navbar-default .navbar-nav > li > a {
+    color: #fff !important;
+    font-size: 14px !important;
+    padding: 14px 8px !important;
+    line-height: 26px !important;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+    background-color: #aa3027 !important;
+    color: #ffffff !important;
+    padding: 14px 8px !important;
+}
+.navbar-default .navbar-right {
+    margin-right: 0px !important;
+}
+.navbar-nav .dropdown-menu > li > a, .navbar-nav .dropdown-menu > li > a:hover {
+    color: #ffffff !important;
+    background-color: #aa3027 !important;
+}
+.navbar-nav .dropdown-menu > li > a {
+    font-weight: 400;
+    color: #333;
+}
+.navbar-nav .dropdown-menu {
+    padding-top: 2px !important;
+    padding-bottom: 6px !important;
+    background-color: #aa3027 !important;
+}
+.dropdown-header, .dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    line-height: 1.6;
+    white-space: nowrap;
+}
+
 .container-fluid {
 	padding-left: 25px !important;
 	padding-right: 25px !important;
@@ -97,7 +124,7 @@ a.btn-primary {
 
 .search-right {
 	display: block;
-	width: 30% !important;
+	width: 32% !important;
 	float: right;
 	text-align: right;
 	height: 40px;
@@ -106,7 +133,7 @@ a.btn-primary {
 .search-right input {
 	float: left;
 	margin-right: 5px !important;
-	margin-left: -98px !important;
+	margin-left: -44px !important;
 }
 
 .pag-right {
@@ -124,12 +151,16 @@ a.btn-primary {
 
 .col-actions {
 	text-align: center;
-	width: 280px !important;
+	width: 300px !important;
 }
 
 .btn {
 	vertical-align: baseline !important;
 	margin-bottom: -1px !important;
+}
+
+.btn-outline-secondary {
+  border: 1px solid #d43f3a !important;
 }
 
 th {
@@ -141,12 +172,45 @@ td {
 	vertical-align: baseline !important;
 }
 
+.page-login {
+  background-color: #ffe8e2 !important;
+}
+
+.container-login {
+  max-width: 350px;
+  margin: 25px auto;
+  margin-top: 75px !important;
+}
+
 .container-form {
 	margin-left: -15px !important;
 }
 
 .alert {
   margin-top: 15px !important;
+}
+
+.title-login {
+  text-align: center;
+  padding-bottom: 12px;
+}
+
+.links-shared {
+  display: block;
+  height: 22px !important;
+}
+
+.link-signup {
+  float: left;
+  width: 40%;
+  font-size: 14px !important;
+}
+
+.link-forgot-password {
+  float: left;
+  width: 60%;
+  font-size: 14px !important;
+  text-align: right !important;
 }
 
 div {

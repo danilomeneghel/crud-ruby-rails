@@ -1,16 +1,17 @@
 class SkillsController < ApplicationController
   before_action :set_skill, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
   helper_method :sort_column, :sort_direction
-  
+
   # GET /skills
   # GET /skills.json
   def index
     if params[:search]
 		@skills = Skill.search(params[:search])
-	else 
+	else
 		@skills = Skill.all
 	end
-	
+
 	@skills = @skills.order(sort_column + ' ' + sort_direction).paginate(:page => params[:page], :per_page => 5)
   end
 
@@ -78,11 +79,11 @@ class SkillsController < ApplicationController
     def skill_params
       params.require(:skill).permit(:name)
     end
-	
+
 	def sort_column
 	  Skill.column_names.include?(params[:sort]) ? params[:sort] : "name"
 	end
-	
+
 	def sort_direction
 	  %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
 	end

@@ -1,0 +1,32 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h3 class="title-login">Sign in</h3>
+      <div class="form-group">
+        <%= f.label :email, class: "sr-only" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :password, class: "sr-only" %>
+        <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder: "Password" %>
+      </div>
+      <div class="form-group">
+        <%= f.submit "Login", class: "btn btn-lg btn-danger btn-block" %>
+      </div>
+      <div class="links-shared">
+        <%= render "devise/shared/links" %>
+      </div>
+      <% if alert %>
+      	<div class="alert alert-danger"><%= alert %></div>
+      <% end %>
+      <% if notice %>
+      	<div class="alert alert-success"><%= notice %></div>
+      <% end %>
+    </div>
+  </div>
+  <div class="text-center">
+    <strong>Test Login:</strong><br><br>
+    Email: admin@admin.com<br>
+    Password: admin123<br>
+  </div>
+<% end %>

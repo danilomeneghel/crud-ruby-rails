@@ -1,0 +1,28 @@
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+  <%= f.hidden_field :reset_password_token %>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h3 class="title-login">Change your password</h3>
+      <div class="form-group">
+        <%= f.label :password, "New password" %>
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+        <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :password_confirmation, "Confirm new password" %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+      </div>
+      <div class="actions">
+        <%= link_to "/", :class => "btn btn-outline-secondary" do %>
+          <i class="fa fa-arrow-left"></i> Back
+        <% end %>
+        <%= button_tag type: 'submit', class: 'btn btn-danger' do %>
+          <i class="fa fa-hdd-o"></i> Change my password
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>

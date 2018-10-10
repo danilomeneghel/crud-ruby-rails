@@ -1,16 +1,17 @@
 class SectorsController < ApplicationController
   before_action :set_sector, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
   helper_method :sort_column, :sort_direction
-  
+
   # GET /sectors
   # GET /sectors.json
   def index
     if params[:search]
 		@sectors = Sector.search(params[:search])
-	else 
+	else
 		@sectors = Sector.all
 	end
-	
+
 	@sectors = @sectors.order(sort_column + ' ' + sort_direction).paginate(:page => params[:page], :per_page => 5)
   end
 
@@ -78,11 +79,11 @@ class SectorsController < ApplicationController
     def sector_params
       params.require(:sector).permit(:name)
     end
-	
+
 	def sort_column
 	  Sector.column_names.include?(params[:sort]) ? params[:sort] : "name"
 	end
-	
+
 	def sort_direction
 	  %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
 	end
