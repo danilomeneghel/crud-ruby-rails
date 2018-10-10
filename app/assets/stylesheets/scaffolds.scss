@@ -145,10 +145,6 @@ a.btn-primary {
 	height: 50px;
 }
 
-.btn-success {
-	color: #fff !important;
-}
-
 .col-actions {
 	text-align: center;
 	width: 300px !important;
@@ -159,17 +155,13 @@ a.btn-primary {
 	margin-bottom: -1px !important;
 }
 
-.container-form .btn-default {
+.btn-default {
   color: #d43f3a !important;
   background-color: #fff;
   border-color: #d43f3a !important;
 }
 
-.container-form .fa-arrow-left {
-  color: #d43f3a !important;
-}
-
-.container-form .btn-success {
+.btn-success {
   color: #fff !important;
   background-color: #d9534f !important;
   border-color: #d43f3a !important;
@@ -192,10 +184,6 @@ a.btn-primary {
   top: 25px;
   left: 12px;
   z-index: 2;
-}
-
-.input-login {
-  padding-left: 34px !important;
 }
 
 .fa-lock {
