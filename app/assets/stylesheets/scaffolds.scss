@@ -161,6 +161,39 @@ a.btn-primary {
 
 .btn-outline-secondary {
   border: 1px solid #d43f3a !important;
+  color: #d43f3a !important;
+}
+
+.fa-arrow-left {
+  color: #d43f3a !important;
+}
+
+.fa-user {
+  float: left;
+  position: relative;
+  color: #d43f3a !important;
+  font-size: 16px !important;
+  top: 25px;
+  left: 12px;
+  z-index: 2;
+}
+
+.input-login {
+  padding-left: 34px !important;
+}
+
+.fa-lock {
+  float: left;
+  position: relative;
+  color: #d43f3a !important;
+  font-size: 16px !important;
+  top: 25px;
+  left: 12px;
+  z-index: 2;
+}
+
+.input-login {
+  padding-left: 34px !important;
 }
 
 th {
@@ -259,4 +292,24 @@ label {
 .label-checkbox {
   display: inline-block;
   margin: 0px 5px;
+}
+
+#error_explanation {
+  max-width: 350px !important;
+  background-color: #fff !important;
+  border: 1px solid #C9302C !important;
+}
+
+.container-form #error_explanation {
+  max-width: 450px !important;
+}
+
+.field_with_errors {
+  color: #C9302C !important;
+  background-color: #fff !important;
+  display: block !important;
+}
+
+.field_with_errors input {
+  border: 1px solid #C9302C !important;
 }
