@@ -15,7 +15,7 @@
     <%= form.label :sector %>
     <%= collection_select(:employee, :sector_id, Sector.all, :id, :name, {}, {:class => 'form-control'}) %>
   </div>
-  
+
   <div class="form-group">
     <%= form.label :name %>
     <%= form.text_field :name, id: :employee_name, class: 'form-control' %>
@@ -37,17 +37,17 @@
 	<%= b.label(class:"label-checkbox") { b.check_box + b.text } %>
 	<% end %>
   </div>
-  
+
   <div class="form-group">
     <%= form.label :active %>
     <%= form.check_box :active, id: :employee_active %>
   </div>
 
   <div class="actions">
-	<%= link_to employees_path, :class => "btn btn-default" do %> 
+	<%= link_to employees_path, :class => "btn btn-default" do %>
 		<i class="fa fa-arrow-left"></i> Back
 	<% end %>
-    <%= button_tag type: 'submit', class: 'btn btn-success' do %> 
+    <%= button_tag type: 'submit', class: 'btn btn-success' do %>
 		<i class="fa fa-hdd-o"></i> Save
 	<% end %>
   </div>
