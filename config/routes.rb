@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root 'employees#index' 
-  
+  devise_for :users, controllers: { sessions: 'sessions' }
+  root 'employees#index'
+
   resources :skills
   resources :sectors
   resources :employees
