@@ -7,6 +7,7 @@ Project of an CRUD developed with Rails.
 - CRUD
 - MVC
 - Active Record
+- Login
 - Search
 - Sort Column
 - Paginate
