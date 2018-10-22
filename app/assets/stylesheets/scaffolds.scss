@@ -210,17 +210,35 @@ td {
 }
 
 .page-login {
-  background-color: #ffe8e2 !important;
+  background-color: #b93427 !important;
+}
+
+.bg-login {
+  background-color: #ffe8e2;
+  height: 250px !important;
 }
 
 .container-login {
   max-width: 350px;
-  margin: 25px auto;
-  margin-top: 75px !important;
+  margin: 0px auto !important;
+  padding-top: 90px !important;
 }
 
 .container-form {
 	margin-left: -15px !important;
+}
+
+.box-login {
+  box-shadow: 1px 3px 12px #d15957;
+}
+
+input:focus {
+  box-shadow: 1px 1px 5px #e28c8c !important;
+  border: 1px solid #e28c8c !important;
+}
+
+.test-login {
+  color: #fff !important;
 }
 
 .alert {

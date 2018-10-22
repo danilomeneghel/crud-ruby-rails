@@ -1,6 +1,6 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="panel panel-default">
-    <div class="panel-body">
+    <div class="panel-body box-login">
       <h3 class="title-login">Sign in</h3>
       <div class="form-group">
         <%= f.label :email, class: "sr-only" %>
@@ -26,7 +26,7 @@
       <% end %>
     </div>
   </div>
-  <div class="text-center">
+  <div class="text-center test-login">
     <strong>Test Login:</strong><br><br>
     Email: admin@admin.com<br>
     Password: admin123<br>
