@@ -200,7 +200,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  byebug
+  byebug (~> 11.0.1)
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   devise

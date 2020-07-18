@@ -18,7 +18,7 @@ Project of an CRUD developed with Rails.
 
 - Ruby >= 2.3.3
 - Rails >= 5.1.6
-- Gem >= 2.5.2
+- SQLite >= 3
 
 ## Tecnologies
 
@@ -35,7 +35,8 @@ Project of an CRUD developed with Rails.
 $ git clone https://github.com/danilomeneghel/ruby_on_rails.git
 
 $ cd ruby_on_rails
-$ gem install rake && bundle install
+$ gem install rake
+$ gem install bundler && bundle install
 
 $ rake db:migrate
 ```

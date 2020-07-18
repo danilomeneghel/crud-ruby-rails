@@ -7,14 +7,14 @@
 <div class="search-right">
 	<%= form_tag employees_path, :method => :get do %>
 		<%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search" %>
-		<%= button_tag type: "submit", class: "btn btn-primary" do %>
+		<%= button_tag type: "submit", class: "btn btn-success" do %>
 			<i class="fa fa-search"></i>
 		<% end %>
 	<% end %>
 </div>
 
 <% if @employees.length == 0 %>
-	<div class="alert alert-info">No items registered</div>
+	<div class="alert alert-warning">No items registered</div>
 <% else %>
 	<table class="table table-bordered table-striped">
 	  <thead>
