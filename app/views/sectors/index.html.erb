@@ -6,7 +6,7 @@
 
 <div class="search-right">
 	<%= form_tag sectors_path, :method => :get do %>
-		<%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search" %>
+		<%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search by Name" %>
 		<%= button_tag type: "submit", class: "btn btn-success" do %>
 			<i class="fa fa-search"></i>
 		<% end %>
