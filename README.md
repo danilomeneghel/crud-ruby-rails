@@ -35,6 +35,8 @@ Project of an CRUD developed with Rails.
 $ git clone https://github.com/danilomeneghel/ruby_on_rails.git
 
 $ cd ruby_on_rails
+$ gem install rake && bundle install
+
 $ rake db:migrate
 ```
 
